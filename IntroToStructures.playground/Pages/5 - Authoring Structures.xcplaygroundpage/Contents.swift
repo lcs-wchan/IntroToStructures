@@ -144,7 +144,7 @@ struct Cylinder {
     }
     
     var surfaceAreaDescription: String{
-        return "The area of the Cylinder is" + String(format: "%.1f", surfaceArea) + "square units"
+        return "The surface area of the Cylinder is" + String(format: "%.1f", surfaceArea) + "square units"
     }
     
     var volumeDescription: String{
@@ -167,6 +167,45 @@ someCylinder.volume
 //  report the volume
 print(someCylinder.volumeDescription)
 
+// Define a Sphere
+struct Sphere {
+    
+    // MARK: Propertites
+    var r: Double
+    
+    // return raw surface area
+    var surfaceArea: Double {
+        return 4*Double.pi*pow(r, 2.0)
+    }
+    
+    // return raw volume
+    var volume: Double {
+        return Double.pi*pow(r, 3.0)*4/3
+    }
+    
+    var surfaceAreaDescription: String{
+        return "The surface area of the Sphere is" + String(format: "%.1f", surfaceArea) + "square units"
+    }
+    
+    var volumeDescription: String{
+         return "The volume of the Sphere is" + String(format: "%.1f", volume) + "cubic units"
+    }
+}
+
+// create a Sphere instance
+var someSphere = Sphere(r: 3)
+
+// what is the surface area?
+someSphere.surfaceArea
+
+//Report the surface area
+print(someSphere.surfaceAreaDescription)
+
+// what is the volume
+someSphere.volume
+
+//  report the volume
+print(someSphere.volumeDescription)
 
 /*:
  [Previous: Area Example - Rectangle](@previous) | Page 4
