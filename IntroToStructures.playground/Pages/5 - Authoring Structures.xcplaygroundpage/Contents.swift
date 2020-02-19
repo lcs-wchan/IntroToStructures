@@ -60,7 +60,7 @@ struct Triangle {
     }
     
     var perimeterDescription: String{
-         return "The preimeterDescription of the triangle is" + String(format: "%.1f", perimeter) + "units"
+         return "The preimeter of the triangle is" + String(format: "%.1f", perimeter) + "units"
     }
 }
 
@@ -78,6 +78,51 @@ someTriangle.perimeter
 
 //  report the perimeter
 print(someTriangle.perimeterDescription)
+
+// Define a triangle
+struct Parallelgram {
+    
+    // MARK: Propertites
+    var b: Double
+    var h: Double
+    var c: Double
+    
+   
+    
+    // return raw area
+    var area: Double {
+        return b*h
+    }
+    
+    // return raw perimeter
+    var perimeter: Double {
+        return 2*(b+c)
+    }
+    
+    var areaDescription: String{
+        return "The area of the Parallelgram is" + String(format: "%.1f", area) + "square units"
+    }
+    
+    var perimeterDescription: String{
+         return "The preimeter of the parallelgram is" + String(format: "%.1f", perimeter) + "units"
+    }
+}
+
+// create a triangle instance
+var someParallelgram = Parallelgram(b: 3, h: 4, c: 1)
+
+// what is the area?
+someParallelgram.area
+
+//Report the area
+print(someParallelgram.areaDescription)
+
+// what is the perimeter
+someParallelgram.perimeter
+
+//  report the perimeter
+print(someParallelgram.perimeterDescription)
+
 
 
 /*:
