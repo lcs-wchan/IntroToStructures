@@ -33,6 +33,51 @@ import Foundation
  */
 // Begin your work here...
 
+// Define a triangle
+struct Triangle {
+    
+    // MARK: Propertites
+    var b: Double
+    var h: Double
+    var a: Double
+    var c: Double
+   
+    
+    // return raw area
+    var area: Double {
+        return b*h/2
+    }
+    
+    // return raw perimeter
+    var perimeter: Double {
+        return a+b+c
+        
+        
+    }
+    
+    var areaDescription: String{
+        return "The area of the triangle is" + String(format: "%.1f", area) + "square units"
+    }
+    
+    var perimeterDescription: String{
+         return "The preimeterDescription of the triangle is" + String(format: "%.1f", perimeter) + "units"
+    }
+}
+
+// create a triangle instance
+var someTriangle = Triangle(b: 3, h: 4, a: 2, c: 1)
+
+// what is the area?
+someTriangle.area
+
+//Report the area
+print(someTriangle.areaDescription)
+
+// what is the perimeter
+someTriangle.perimeter
+
+//  report the perimeter
+print(someTriangle.perimeterDescription)
 
 
 /*:
