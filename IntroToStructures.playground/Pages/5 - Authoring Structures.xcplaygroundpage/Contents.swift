@@ -79,7 +79,7 @@ someTriangle.perimeter
 //  report the perimeter
 print(someTriangle.perimeterDescription)
 
-// Define a triangle
+// Define a Parallelgram
 struct Parallelgram {
     
     // MARK: Propertites
@@ -108,7 +108,7 @@ struct Parallelgram {
     }
 }
 
-// create a triangle instance
+// create a Parallelgram instance
 var someParallelgram = Parallelgram(b: 3, h: 4, c: 1)
 
 // what is the area?
@@ -123,6 +123,49 @@ someParallelgram.perimeter
 //  report the perimeter
 print(someParallelgram.perimeterDescription)
 
+// Define a Cylinder
+struct Cylinder {
+    
+    // MARK: Propertites
+    var r: Double
+    var h: Double
+    
+    
+   
+    
+    // return raw surface area
+    var surfaceArea: Double {
+        return 2*Double.pi*pow(r, 2.0) + 2*Double.pi*r*h
+    }
+    
+    // return raw volume
+    var volume: Double {
+        return Double.pi*pow(r, 2.0)*h
+    }
+    
+    var surfaceAreaDescription: String{
+        return "The area of the Cylinder is" + String(format: "%.1f", surfaceArea) + "square units"
+    }
+    
+    var volumeDescription: String{
+         return "The volume of the parallelgram is" + String(format: "%.1f", volume) + "units"
+    }
+}
+
+// create a Cylinder instance
+var someCylinder = Cylinder(r: 3, h: 4)
+
+// what is the surface area?
+someCylinder.surfaceArea
+
+//Report the surface area
+print(someCylinder.surfaceAreaDescription)
+
+// what is the volume
+someCylinder.volume
+
+//  report the volume
+print(someCylinder.volumeDescription)
 
 
 /*:
